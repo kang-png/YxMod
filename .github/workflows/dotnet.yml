@@ -31,7 +31,9 @@ jobs:
     - name: Show directory tree
       run: |
         dir
-        dir bin\Debug\net462
+        dir bin
+        dir bin\Debug
+        dir bin\Release
     - name: Upload built DLL
       uses: actions/upload-artifact@v4
       with:
