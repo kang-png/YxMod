@@ -39,7 +39,7 @@ jobs:
 
     - name: Get short hash
       id: short_sha
-      run: echo "::set-output name=sha::$(expr substr ${{ github.sha }} 1 7)"
+      run: echo "sha=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
 
     - name: Create Release
       uses: softprops/action-gh-release@v1
@@ -47,3 +47,4 @@ jobs:
         tag_name: auto-${{ steps.short_sha.outputs.sha }}
         prerelease: true
         files: bin\Release\net462\Assembly-CSharp.dll
+
