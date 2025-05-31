@@ -37,17 +37,12 @@ jobs:
         name: Assembly-CSharp.dll
         path: bin\Release\net462\Assembly-CSharp.dll
 
-    - name: Create tag from current commit
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git tag auto-${{ github.sha }}
-        git push origin auto-${{ github.sha }}
-
-    - name: Upload to GitHub Release
+    - name: Get current time
+      id: time
+      run: echo "timestamp=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+    - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: auto-${{ github.sha }}
+        prerelease: true
+        tag_name: 自动构建-${{ steps.time.outputs.timestamp }}
         files: bin\Release\net462\Assembly-CSharp.dll
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
