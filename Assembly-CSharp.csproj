@@ -11,106 +11,106 @@
   <PropertyGroup />
   <ItemGroup>
     <Reference Include="UnityEngine">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>Libs\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.PhysicsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>Libs\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.AudioModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.AnimationModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HumanAPI">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\HumanAPI.dll</HintPath>
+      <HintPath>Libs\HumanAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Core">
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.ParticleSystemModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MeshBakerCore">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\MeshBakerCore.dll</HintPath>
+      <HintPath>Libs\MeshBakerCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>Libs\ProBuilderCore-Unity5.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>Libs\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.VideoModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.VRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>Libs\ProBuilderMeshOps-Unity5.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.UnityAnalyticsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.JSONSerializeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.ImageConversionModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.UnityWebRequestModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.UNETModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>C:\SteamLibrary\steamapps\common\Human Fall Flat\Human_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>Libs\UnityEngine.ScreenCaptureModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml">
