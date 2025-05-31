@@ -41,4 +41,5 @@ jobs:
       with:
         tag_name: auto-${{ github.sha }}
         prerelease: true
-        files: bin\Release\net462\Assembly-CSharp.dll
+        files: |
+          bin/Release/net462/*
