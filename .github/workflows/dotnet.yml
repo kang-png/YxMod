@@ -36,20 +36,9 @@ jobs:
       with:
         name: Assembly-CSharp.dll
         path: bin\Release\net462\Assembly-CSharp.dll
-
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v4
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
       with:
-        name: built-dll
-
-    - name: Create GitHub Release
-      uses: softprops/action-gh-release@v2
-      with:
-        files: Assembly-CSharp.dll
         tag_name: auto-${{ github.sha }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        prerelease: true
+        files: bin\Release\net462\Assembly-CSharp.dll
