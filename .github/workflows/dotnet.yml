@@ -41,14 +41,13 @@ jobs:
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git tag ${{ steps.short_sha.outputs.sha }}
-        git push origin ${{ steps.short_sha.outputs.sha }}
-    
+        git tag auto-${{ github.sha }}
+        git push origin auto-${{ github.sha }}
+
     - name: Upload to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: ${{ steps.short_sha.outputs.sha }}
+        tag_name: auto-${{ github.sha }}
         files: bin\Release\net462\Assembly-CSharp.dll
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
