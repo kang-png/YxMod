@@ -28,9 +28,12 @@ jobs:
 
     - name: Build with MSBuild
       run: msbuild Assembly-CSharp.csproj /p:Configuration=Release
-      
+    - name: Show directory tree
+      run: |
+        dir
+        dir bin\Debug\net462
     - name: Upload built DLL
       uses: actions/upload-artifact@v4
       with:
         name: Assembly-CSharp.dll
-        path: bin\Debug\net462\Assembly-CSharp.dll
+        path: bin\Release\net462\Assembly-CSharp.dll
