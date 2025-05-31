@@ -33,9 +33,18 @@ jobs:
       with:
         name: Assembly-CSharp.dll
         path: bin\Release\net462\Assembly-CSharp.dll
+
+    - name: Create tag from current commit
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git tag auto-${{ github.sha }}
+        git push origin auto-${{ github.sha }}
+
     - name: Upload to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
+        tag_name: auto-${{ github.sha }}
         files: bin\Release\net462\Assembly-CSharp.dll
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
