@@ -527,7 +527,8 @@ public class NetTransportSteam : NetTransport
     {
         SteamMatchmaking.SetLobbyData(lobbyID, "cp", (UI_SheZhi.xujiarishu + userCount).ToString());//userCount.ToString()  ///虚假房间人数
         SteamMatchmaking.SetLobbyData(lobbyID, "name", $"★{UI_SheZhi.fangming}");///修改房名
-		SteamMatchmaking.SetLobbyData(lobbyID, "mp", (UI_SheZhi.xujiarishu + Options.lobbyMaxPlayers).ToString());///虚假最大人数
+        SteamMatchmaking.SetLobbyData(lobbyID, "ll", $"{UI_SheZhi.datingming}");
+        SteamMatchmaking.SetLobbyData(lobbyID, "mp", (UI_SheZhi.xujiarishu + Options.lobbyMaxPlayers).ToString());///虚假最大人数
     }
 
     public override void UpdateServerLevel(ulong levelID, WorkshopItemSource levelType)
@@ -593,6 +594,7 @@ public class NetTransportSteam : NetTransport
                 lobbyID = new CSteamID(param.m_ulSteamIDLobby);
                 //SteamMatchmaking.SetLobbyData(lobbyID, "name", SteamFriends.GetPersonaName());
                 SteamMatchmaking.SetLobbyData(lobbyID, "name", $"★{UI_SheZhi.fangming}");////修改房名
+				SteamMatchmaking.SetLobbyData(lobbyID, "ll", $"{UI_SheZhi.datingming}");
                 SteamMatchmaking.SetLobbyData(lobbyID, "version", VersionDisplay.fullVersion);
                 SteamMatchmaking.SetLobbyData(lobbyID, "net", VersionDisplay.netCode.ToString());
                 UpdateOptionsLobbyData();

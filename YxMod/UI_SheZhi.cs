@@ -94,6 +94,7 @@ internal class UI_SheZhi : MonoBehaviour
     ///////开放设置
     private static string[] guajidongzuoNames = { "跌落", "睡觉", "气球", "坐下", "挂件" };
     public static string fangming;
+    public static string datingming;
     public static int zuidarenshu;
     public static bool yaoqing;
     public static bool jinzhijiaru;
@@ -376,6 +377,7 @@ internal class UI_SheZhi : MonoBehaviour
                 //房名设置//最大人数//仅限邀请//锁定关卡//挂机提醒//房间外显最大人数和当前人数修改
                 //屏蔽炸房//防踢
                 UI.CreatWenBenKuang("房间名称", ref fangming, 100, 197,XiuGaiFangMing);
+                UI.CreatWenBenKuang("大厅名称", ref datingming, 100, 197, XiuGaiDaTingMing);
                 GUILayout.BeginHorizontal();
                 UI.CreatShuZhi("玩家上限", ref zuidarenshu, 0, 99, 1,SetWanJiaShangXian);
                 UI.CreatAnNiu_AnXia("仅限邀请", ref yaoqing, false, SetJinXianYaoQing);
@@ -384,9 +386,9 @@ internal class UI_SheZhi : MonoBehaviour
                 UI.CreatShuZhi("虚假人数", ref xujiarishu, 0, 100,1,SetXuJiaRenShu);
                 UI.CreatAnNiu_AnXia("锁定关卡", ref suodingguanqia, false, SetSuoDingGuanQia);
                 GUILayout.EndHorizontal();
-                //GUILayout.BeginHorizontal();
-                //UI.CreatAnNiu_AnXia("游戏中禁止加入", ref jinzhijiaru, false, SetJinZhiJiaRu);
-                //GUILayout.EndHorizontal();
+                GUILayout.BeginHorizontal();
+                UI.CreatAnNiu_AnXia("游戏中禁止加入", ref jinzhijiaru, false, SetJinZhiJiaRu);
+                GUILayout.EndHorizontal();
                 GUILayout.Space(5);
                 UI.CreatFenGeXian();
                 GUILayout.Space(5);
@@ -590,12 +592,13 @@ internal class UI_SheZhi : MonoBehaviour
 
         //开放设置
         fangming = PlayerPrefs.GetString("fangming", SteamFriends.GetPersonaName());
+        datingming = PlayerPrefs.GetString("datingming", SteamFriends.GetPersonaName());
         zuidarenshu = PlayerPrefs.GetInt("zuidarenshu", 10);
         SetMaxPlayers(zuidarenshu);
         xujiarishu = PlayerPrefs.GetInt("xujiarishu", 20);
         yaoqing = PlayerPrefs.GetInt("yaoqing", 0) > 0;
         suodingguanqia = PlayerPrefs.GetInt("suodingguanqia", 0) > 0;
-        //jinzhijiaru = PlayerPrefs.GetInt("jinzhijiaru", 0) > 0;
+        jinzhijiaru = PlayerPrefs.GetInt("jinzhijiaru", 0) > 0;
         pingbizhafang = PlayerPrefs.GetInt("pingbizhafang", 1) > 0;
         pingbici = PlayerPrefs.GetString("pingbici", "大佬炸房|闲人速退|■");
         pingbizishu = PlayerPrefs.GetInt("pingbizishu", 50);
@@ -785,6 +788,20 @@ internal class UI_SheZhi : MonoBehaviour
         NetTransportSteam component = NetGame.instance.GetComponent<NetTransportSteam>();
         SteamMatchmaking.SetLobbyData(component.lobbyID, "name", $"★{UI_SheZhi.fangming}");///修改房名
         PlayerPrefs.SetString("fangming", fangming);
+    }
+    public static void XiuGaiDaTingMing()
+    {
+        NetTransportSteam component = NetGame.instance.GetComponent<NetTransportSteam>();
+
+        if (component != null)
+        {
+            // 修改 Lobby 数据中的 "ll" 字段（你自定义的大厅名键）
+            SteamMatchmaking.SetLobbyData(component.lobbyID, "ll", $"{UI_SheZhi.datingming}");
+            PlayerPrefs.SetString("datingming", datingming);
+
+            // 提示玩家
+            NetChat.Print("大厅名称已修改为：" + $"{UI_SheZhi.datingming}");
+        }
     }
     public static void SetJinZhiJiaRu()///参加正在进行的游戏
     {
