@@ -30,7 +30,7 @@ jobs:
       run: nuget restore Assembly-CSharp.csproj
 
     - name: Build with MSBuild
-      run: msbuild Assembly-CSharp.csproj /p:Configuration=Release
+      run: msbuild Assembly-CSharp.csproj /p:Configuration=Release /p:CodePage=65001
     - name: Upload built DLL
       uses: actions/upload-artifact@v4
       with:
