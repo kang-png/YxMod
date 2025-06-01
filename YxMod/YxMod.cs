@@ -378,7 +378,7 @@ public class YxMod : MonoBehaviour
         {
             return;
         }
-        if (Game.GetKeyDown(KeyCode.Mouse3) || Input.GetMouseButtonDown(2) || Game.GetKeyDown(KeyCode.U))
+        if (Game.GetKeyDown(KeyCode.Mouse3) || Game.GetKeyDown(KeyCode.U))
         {
             if (NetGame.isServer)
             {
@@ -398,7 +398,7 @@ public class YxMod : MonoBehaviour
             }
 
         }
-        if (Game.GetKeyDown(KeyCode.Mouse4) || Input.GetMouseButtonDown(3) || Game.GetKeyDown(KeyCode.B))
+        if (Game.GetKeyDown(KeyCode.Mouse4) || Game.GetKeyDown(KeyCode.B))
         {
             if (NetGame.isServer)
             {
