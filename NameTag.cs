@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Multiplayer;
 using UnityEngine;
 
@@ -141,7 +141,7 @@ public class NameTag : MonoBehaviour
 
     private void Update()
     {
-        if (UI_SheZhi.xianshimingzi)/////�޸�
+        if (UI_SheZhi.xianshimingzi)/////修改
         {
             if (ShouldDisplay())
             {

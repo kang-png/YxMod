@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using I2.Loc;
 using InControl;
@@ -136,15 +136,15 @@ public class MultiplayerSelectLobbyMenu : MenuTransition
             SetJoinFriendButtonState();
             if ((InputManager.ActiveDevice.Action4.IsPressed && InputManager.ActiveDevice.Action4.HasChanged) || Input.GetKeyDown(KeyCode.Y))
             {
-                if (UI_SheZhi.danyexianshi)/////修改
+                if (UI_SheZhi.danyexianshi)/////淇敼
                 {
                     NetGame.friendly = false;
                     lobbySelectMenuOptions.SetFriendText(NetGame.friendly);
                 }
                 RefreshClick();
             }
-            /////修改   单页显示
-            if ((InputManager.ActiveDevice.RightTrigger.IsPressed && InputManager.ActiveDevice.RightTrigger.HasChanged) || (Input.GetKeyDown(KeyCode.F) && !UI_SheZhi.danyexianshi)) ///单页显示 修改
+            /////淇敼   鍗曢〉鏄剧ず
+            if ((InputManager.ActiveDevice.RightTrigger.IsPressed && InputManager.ActiveDevice.RightTrigger.HasChanged) || (Input.GetKeyDown(KeyCode.F) && !UI_SheZhi.danyexianshi)) ///鍗曢〉鏄剧ず 淇敼
 			{
                 ToggleFriendlyGame();
                 RefreshClick();
@@ -177,9 +177,9 @@ public class MultiplayerSelectLobbyMenu : MenuTransition
     //}
     private void SetScreenText()
     {
-        if (UI_SheZhi.danyexianshi)////修改
+        if (UI_SheZhi.danyexianshi)////淇敼
         {
-            titleText.text = "全部游戏";
+            titleText.text = "鍏ㄩ儴娓告垙";
         }
         else
         {

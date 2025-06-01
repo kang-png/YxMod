@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Diagnostics;
 using System.IO;
@@ -845,7 +845,7 @@ public class App : MonoBehaviour, IDependency
                     }
                     else
                     {
-                        UnityEngine.Debug.Log("·şÎñÆ÷ÉÏµÄ°æ±¾Óë´Ë¹Ø¿¨²»Í¬");
+                        UnityEngine.Debug.Log("æœåŠ¡å™¨ä¸Šçš„ç‰ˆæœ¬ä¸æ­¤å…³å¡ä¸åŒ");
                         UnityEngine.Debug.LogError("Incompatible level. Server hash: " + serverLoadedHash + ". Client Hash: " + loadedHash);
                         //Dialogs.ConnectionFailed("IncompatibleLevel", delegate
                         //{

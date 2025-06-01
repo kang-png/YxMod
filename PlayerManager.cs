@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using InControl;
 using Multiplayer;
 using UnityEngine;
@@ -346,7 +346,7 @@ public class PlayerManager : MonoBehaviour
     public void OnLocalPlayerAdded(NetPlayer player)
     {
         ApplyControls();
-        if (NetGame.instance.local.players.Count > 100 && activeDevices.Count < 200) ///�޸�
+        if (NetGame.instance.local.players.Count > 100 && activeDevices.Count < 200) ///修改
 		{
             NetGame.instance.RemoveLocalPlayer(player);
         }

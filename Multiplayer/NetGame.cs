@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +12,7 @@ public class NetGame : MonoBehaviour, IDependency
 {
 
 
-    public int kick_times;//±»Ìß´ÎÊı
+    public int kick_times;//è¢«è¸¢æ¬¡æ•°
     public static string lobbyLevel = "Lobby";
 
 	public static NetGame instance;
@@ -229,7 +229,7 @@ public class NetGame : MonoBehaviour, IDependency
 		Shell.RegisterCommand("tserver", OnServerThreading, "tserver <threadcount|off>\r\nToggle multithreaded netcode processing on a server\r\n\t<threadcount> - number of threads to use");
 		Shell.RegisterCommand("netlog", OnNetLog, "netlog <on|off>\r\nToggle network logging (debugging)");
 		netlog = PlayerPrefs.GetInt("netlog", 0) > 0;
-        /////Ôö¼ÓĞŞ¸Ä
+        /////å¢åŠ ä¿®æ”¹
         NetGame.instance.gameObject.AddComponent<YxMod>();
     }
 
@@ -416,7 +416,7 @@ public class NetGame : MonoBehaviour, IDependency
 			{
 				DestroyHostObjects(netHost);
 				OnServerDisconnect(netHost);
-                Chat.TiShi($"Íæ¼Ò {netHost.name} Àë¿ªÁË", TiShiMsgId.Join);      //ÍË³¡ÏûÏ¢
+                Chat.TiShi($"ç©å®¶ {netHost.name} ç¦»å¼€äº†", TiShiMsgId.Join);      //é€€åœºæ¶ˆæ¯
             }
 		}
 		else
@@ -1054,12 +1054,12 @@ public class NetGame : MonoBehaviour, IDependency
                 }
             case NetMsgId.Helo:
                 OnClientHelo(client, stream);
-                //ĞŞ¸Ä  Ôö¼Ó»¶Ó­´Ê
+                //ä¿®æ”¹  å¢åŠ æ¬¢è¿è¯
                 if (Chat.JinRuLiKai_XiaoXi)
                 {
-                    Chat.TiShi($"Íæ¼Ò {client.name} ½øÀ´ÁË", TiShiMsgId.Join);      //½ø³¡ÏûÏ¢
-                    Chat.YxModHelloServer(client);//·şÎñÆ÷·¢ËÍ [YxMod]  µÈ´ı¿Í»§¶ËÏìÓ¦
-                    Chat.SendTiShiStr(client);//»¶Ó­ÌáÊ¾
+                    Chat.TiShi($"ç©å®¶ {client.name} è¿›æ¥äº†", TiShiMsgId.Join);      //è¿›åœºæ¶ˆæ¯
+                    Chat.YxModHelloServer(client);//æœåŠ¡å™¨å‘é€ [YxMod]  ç­‰å¾…å®¢æˆ·ç«¯å“åº”
+                    Chat.SendTiShiStr(client);//æ¬¢è¿æç¤º
                 }
                 break;
             case NetMsgId.AddPlayer:
@@ -1115,7 +1115,7 @@ public class NetGame : MonoBehaviour, IDependency
                 break;
             case NetMsgId.Chat:
                 //OnReceiveChatServer(client, stream);
-                Chat.OnReceiveChatServer(client, stream);//Ìæ»»³É×Ô¼ºµÄ,´¦ÀíÃüÁîÏûÏ¢   ĞŞ¸Ä
+                Chat.OnReceiveChatServer(client, stream);//æ›¿æ¢æˆè‡ªå·±çš„,å¤„ç†å‘½ä»¤æ¶ˆæ¯   ä¿®æ”¹
                 break;
             case NetMsgId.AddHost:
             case NetMsgId.RemoveHost:
@@ -1182,11 +1182,11 @@ public class NetGame : MonoBehaviour, IDependency
             case NetMsgId.Kick:
                 //App.instance.ServerKicked();
                 kick_times++;
-                Chat.TiShi(local, $"·¿Ö÷µÚ {kick_times} ´Î³¢ÊÔÌßÄã,ÒÑÀ¹½Ø");
+                Chat.TiShi(local, $"æˆ¿ä¸»ç¬¬ {kick_times} æ¬¡å°è¯•è¸¢ä½ ,å·²æ‹¦æˆª");
                 if (kick_times == 999)
                 {
                     kick_times = 0;
-                    Chat.TiShi(local, "·¿Ö÷ÒÑÌßÁËÄã999´Î");
+                    Chat.TiShi(local, "æˆ¿ä¸»å·²è¸¢äº†ä½ 999æ¬¡");
                     App.instance.ServerKicked();
                 }
                 break;
@@ -1282,7 +1282,7 @@ public class NetGame : MonoBehaviour, IDependency
                 break;
             case NetMsgId.Chat:
                 //OnReceiveChatClient(stream);
-                Chat.OnReceiveChatClient(stream);//¿Í»§¶Ë½ÓÊÕÏûÏ¢
+                Chat.OnReceiveChatClient(stream);//å®¢æˆ·ç«¯æ¥æ”¶æ¶ˆæ¯
                 break;
             case NetMsgId.Achievement:
                 OnUnlockAchievementClient(stream);

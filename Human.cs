@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using HumanAPI;
 using Multiplayer;
@@ -147,14 +147,14 @@ public class Human : HumanBase
 
 
 
-    /// <Ôö¼ÓµÄ>
+    /// <å¢åŠ çš„>
     public bool isClient;
 
-    //ÆÁ±ÎÕ¨·¿Ïà¹Ø
+    //å±è”½ç‚¸æˆ¿ç›¸å…³
     public string lastFaYanStr;
     public int lastFaYanCount = 1;
     public float lastFaYanTimer;
-    //¹Ò»úÌáĞÑ
+    //æŒ‚æœºæé†’
     public bool YiGuaJi;
     public float lastCaoZuoTime = Time.time;
 
@@ -167,52 +167,52 @@ public class Human : HumanBase
     public bool jinzhibeikong;
     public bool wujiasi;
     public bool wupengzhuang;
-    public DingDian dingdian;//¸öÈË¶¨µã
+    public DingDian dingdian;//ä¸ªäººå®šç‚¹
 
-    public bool zuoxia;//×øÏÂ
+    public bool zuoxia;//åä¸‹
     public bool yizuoxia;
     public float zuoxiaTime;
-    public bool guixia;//¹òÏÂ
+    public bool guixia;//è·ªä¸‹
     public float guixiaTime;
-    public bool yizima;//Ò»×ÖÂí
-    public bool titui;//ÌßÍÈ
+    public bool yizima;//ä¸€å­—é©¬
+    public bool titui;//è¸¢è…¿
     public bool yititui;//
-    public bool quanji;//Y5È­»÷
-    public bool chuquan;//³öÈ­
-    public int numY;//Y   0 ÔÎµ¹    1 ×øÏÂ     2 ¹òÏÂ    3 Ò»×ÖÂí   4 ÌßÍÈ   5È­Íõ
+    public bool quanji;//Y5æ‹³å‡»
+    public bool chuquan;//å‡ºæ‹³
+    public int numY;//Y   0 æ™•å€’    1 åä¸‹     2 è·ªä¸‹    3 ä¸€å­—é©¬   4 è¸¢è…¿   5æ‹³ç‹
 
     public Human ntp_human;
     public bool ntp;
-    public bool fzntp;//·¿Ö÷µÄntphuman
+    public bool fzntp;//æˆ¿ä¸»çš„ntphuman
     public Vector3 ntp_Offset;
 
-    public bool Fly; //·ÉÌì
-    public bool shanxian; //ÉÁÏÖ
+    public bool Fly; //é£å¤©
+    public bool shanxian; //é—ªç°
     public bool flowing;
     public bool feitian;
     public float flowing_speed = 300f;
     public float extend_time_rush;
     public bool rush;
 
-    public bool chaoren;//ÏÌµ°³¬ÈË
-    public bool enshan;//ÏÌµ°³¬ÈË
+    public bool chaoren;//å’¸è›‹è¶…äºº
+    public bool enshan;//å’¸è›‹è¶…äºº
 
-    public bool qianshui;//Ç±Ë®
-    public bool pangxie;//ó¦Ğ·
-    public bool tuique;//ÍÈÈ³
-    public bool tuiguai;//ÍÈ¹Õ
-    public bool bengdi;//±ÄµÏ
+    public bool qianshui;//æ½œæ°´
+    public bool pangxie;//èƒèŸ¹
+    public bool tuique;//è…¿ç˜¸
+    public bool tuiguai;//è…¿æ‹
+    public bool bengdi;//è¹¦è¿ª
                        //public int tiaowu_i;
                        //public bool camPitch_mode;
-    public bool diantun;//µçÍÎ
+    public bool diantun;//ç”µè‡€
     public int diantun_i;
     public bool Diantun_Mod;
-    public bool qiqiu;//ÆøÇò
-    public bool qiqiuxifa;//ÆøÇòÏ··¨
-    public bool sanjitiao;//Èı¼¶Ìø
-    public bool tiaoing;//ÕıÔÚÈı¼¶Ìø
+    public bool qiqiu;//æ°”çƒ
+    public bool qiqiuxifa;//æ°”çƒæˆæ³•
+    public bool sanjitiao;//ä¸‰çº§è·³
+    public bool tiaoing;//æ­£åœ¨ä¸‰çº§è·³
     public int Jump_Times;
-    public bool chaojitiao;//³¬¼¶Ìø
+    public bool chaojitiao;//è¶…çº§è·³
 
 
     public float groundDelay2;
@@ -221,32 +221,32 @@ public class Human : HumanBase
 
 
     public bool daoli;
-    public bool zhuanquan; //×ªÈ¦È¦
+    public bool zhuanquan; //è½¬åœˆåœˆ
     public bool ketouguai;
     public bool diaosigui;
     public float diaosiguiTime;
 
     public bool chaichu;
 
-    public bool kongqipao;//¿ÕÆøÅÚ
+    public bool kongqipao;//ç©ºæ°”ç‚®
     public bool cannon_used;
     public float extend_time;
-    public bool tuoluo;  //ÍÓÂİ
+    public bool tuoluo;  //é™€èº
 
-    public bool dongjie;//¶³½á
+    public bool dongjie;//å†»ç»“
 
-    //public bool qianshou;//Ç£ÊÖ
-    public bool qianshou_zuo;//Ç£ÊÖ×ó
-    //public bool beiqianshou_zuo;//±»Ç£ÊÖ×ó 
-    public Human qianshou_zuo_human;//Ç£ÊÖ×ó
-    public HumanSegment qianshou_zuo_humanHand;//Ç£ÊÖ×óhumanHand
+    //public bool qianshou;//ç‰µæ‰‹
+    public bool qianshou_zuo;//ç‰µæ‰‹å·¦
+    //public bool beiqianshou_zuo;//è¢«ç‰µæ‰‹å·¦ 
+    public Human qianshou_zuo_human;//ç‰µæ‰‹å·¦
+    public HumanSegment qianshou_zuo_humanHand;//ç‰µæ‰‹å·¦humanHand
 
 
 
-    public bool qianshou_you;//Ç£ÊÖÓÒ
-    //public bool beiqianshou_you;//±»Ç£ÊÖ×ó
-    public Human qianshou_you_human;//Ç£ÊÖÓÒ
-    public HumanSegment qianshou_you_humanHand;//Ç£ÊÖ×óhumanHand
+    public bool qianshou_you;//ç‰µæ‰‹å³
+    //public bool beiqianshou_you;//è¢«ç‰µæ‰‹å·¦
+    public Human qianshou_you_human;//ç‰µæ‰‹å³
+    public HumanSegment qianshou_you_humanHand;//ç‰µæ‰‹å·¦humanHand
 
     public bool banshen;
 
@@ -345,7 +345,7 @@ public class Human : HumanBase
 
     }
 
-    /// </Ôö¼ÓµÄ>
+    /// </å¢åŠ çš„>
     /// 
 
 
@@ -375,9 +375,9 @@ public class Human : HumanBase
         humanHead.humanAudio = GetComponentInChildren<HumanAudio>();
         componentInChildren.transform.SetParent(humanHead.transform, worldPositionStays: false);
         InitializeBodies();
-        ///Ôö¼Ó/ĞŞ¸Ä
+        ///å¢åŠ /ä¿®æ”¹
         YxModChuShiHua();
-        ///Ôö¼Ó
+        ///å¢åŠ 
 	}
 
     private void InitializeBodies()
@@ -543,17 +543,17 @@ public class Human : HumanBase
             }
             velocities[i] = vector2;
         }
-        /////Ôö¼ÓµÄÄÚÈİ
+        /////å¢åŠ çš„å†…å®¹
         UI_SheZhi.GuaJiTiXing_Fun(this);
-        YxMod.ZuoXia_Fun(this);//×øÏÂ
-        YxMod.YiZiMa_Fun(this);//Ò»×ÖÂí
-        YxMod.JiFei_Fun(this);//Ìß×óÍÈ
-        YxMod.QuanJi_Fun(this);//È­»÷
+        YxMod.ZuoXia_Fun(this);//åä¸‹
+        YxMod.YiZiMa_Fun(this);//ä¸€å­—é©¬
+        YxMod.JiFei_Fun(this);//è¸¢å·¦è…¿
+        YxMod.QuanJi_Fun(this);//æ‹³å‡»
 
-        dingdian.DingDian_Fun(this);//¶¨µã   
-        YxMod.WuPengZhuang_Fun(this);//ÎŞÅö×²
-        YxMod.GuaJian_Fun(this);//¹Ò¼ş
-        YxMod.WuJiaSi_Fun(this);//ÎŞ¼ÙËÀ
+        dingdian.DingDian_Fun(this);//å®šç‚¹   
+        YxMod.WuPengZhuang_Fun(this);//æ— ç¢°æ’
+        YxMod.GuaJian_Fun(this);//æŒ‚ä»¶
+        YxMod.WuJiaSi_Fun(this);//æ— å‡æ­»
 
         if (!UI_GongNeng.yulexitong_KaiGuan)
         {
@@ -575,31 +575,31 @@ public class Human : HumanBase
 
             if (chaojitiao) { YxMod.chaojitiao(this); }
         }
-        YxMod.QianShou_Fun(this);//Ç£ÊÖ
-        YxMod.QianShui_Fun(this);//Ç±Ë®                   
-        YxMod.PangXie_Fun(this);//ó¦Ğ·                     
-        YxMod.ZhuanQuan_Fun(this);//×ªÈ¦
-        YxMod.TuoLuo_Fun(this);  //ÍÓÂİ
-        YxMod.KeTouGuai_Fun(this);//¿ÄÍ·¹Ö              
-        YxMod.DiaoSiGui_Fun(this);//µõËÀ¹í            
-        YxMod.DaoLi_Fun(this);//µ¹Á¢        
-        YxMod.ChaiChu(this);//²ğ³ı        
-        YxMod.KongQiPao_Fun(this);//¿ÕÆøÅÚ                
-        YxMod.TuiQue_Fun(this);//ÍÈÈ³
-        YxMod.DianTun_Fun(this);//µçÍÎ        
-        YxMod.QiQiu_Fun(this);//ÆøÇò         
-        YxMod.QiQiuXiFa_Fun(this);//ÆøÇòÏ··¨
-        YxMod.chaojitiao(this);//³¬¼¶Ìø
+        YxMod.QianShou_Fun(this);//ç‰µæ‰‹
+        YxMod.QianShui_Fun(this);//æ½œæ°´                   
+        YxMod.PangXie_Fun(this);//èƒèŸ¹                     
+        YxMod.ZhuanQuan_Fun(this);//è½¬åœˆ
+        YxMod.TuoLuo_Fun(this);  //é™€èº
+        YxMod.KeTouGuai_Fun(this);//ç£•å¤´æ€ª              
+        YxMod.DiaoSiGui_Fun(this);//åŠæ­»é¬¼            
+        YxMod.DaoLi_Fun(this);//å€’ç«‹        
+        YxMod.ChaiChu(this);//æ‹†é™¤        
+        YxMod.KongQiPao_Fun(this);//ç©ºæ°”ç‚®                
+        YxMod.TuiQue_Fun(this);//è…¿ç˜¸
+        YxMod.DianTun_Fun(this);//ç”µè‡€        
+        YxMod.QiQiu_Fun(this);//æ°”çƒ         
+        YxMod.QiQiuXiFa_Fun(this);//æ°”çƒæˆæ³•
+        YxMod.chaojitiao(this);//è¶…çº§è·³
 
-        YxMod.FeiTian_Fun(this); //·ÉÌì
-        YxMod.ShanXian_Fun(this);//ÉÁÏÖ
-        YxMod.ChaoRen_Fun(this);//³¬ÈË
+        YxMod.FeiTian_Fun(this); //é£å¤©
+        YxMod.ShanXian_Fun(this);//é—ªç°
+        YxMod.ChaoRen_Fun(this);//è¶…äºº
 
-        //YxMod.BanShen_Fun(this);//°ëÉí²»Ëì
+        //YxMod.BanShen_Fun(this);//åŠèº«ä¸é‚
         YxMod.QuXiaoBanShen(this);
         
 
-        /////Ôö¼ÓµÄÄÚÈİ
+        /////å¢åŠ çš„å†…å®¹
     }
 
     private void ProcessInput()
@@ -612,23 +612,23 @@ public class Human : HumanBase
                 {
                     MakeUnconscious();
                 }
-                else if (numY == 1)//×øÏÂ
+                else if (numY == 1)//åä¸‹
                 {
                     YxMod.ZuoXia(this);
                 }
-                else if (numY == 2)//¹òÏÂ
+                else if (numY == 2)//è·ªä¸‹
                 {
                     YxMod.ZuoXia(this, true);
                 }
-                else if (numY == 3)//Ò»×ÖÂí
+                else if (numY == 3)//ä¸€å­—é©¬
                 {
                     YxMod.YiZiMa(this);
                 }
-                else if (numY == 4)//ÌßÍÈ
+                else if (numY == 4)//è¸¢è…¿
                 {
                     YxMod.TiTui(this);
                 }
-                else if (numY == 5)//È­Íõ
+                else if (numY == 5)//æ‹³ç‹
                 {
                     quanji = true;
                     YxMod.QuanJiAnimation(this);

@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+锘縰sing System.Collections.Generic;
 using HumanAPI;
 using InControl;
 using UnityEngine;
@@ -176,7 +176,7 @@ public class NetPlayer : NetScope
 	public override void PreFixedUpdate()
 	{
 
-        //自由视角 /////修改
+        //鑷敱瑙嗚 /////淇敼
         if (isLocalPlayer && ((UI_Main.ShowShuBiao && UI_SheZhi.noKong_xianshishubiao) || FreeRoamCam.allowFreeRoam))
         {
             return;

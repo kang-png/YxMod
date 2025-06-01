@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Text;
 using HumanAPI;
@@ -289,7 +289,7 @@ public sealed class LevelInformationBox : MonoBehaviour
         LevelImage.texture = levelData.thumbnailTexture;
         LevelImage.enabled = LevelImage.texture != null;
     }
-    private IEnumerator GetNewLevel(ulong levelID) //¹Ø±Õ´óÌüÏÂÔØ   ÐÞ¸Ä
+    private IEnumerator GetNewLevel(ulong levelID) //å…³é—­å¤§åŽ…ä¸‹è½½   ä¿®æ”¹
     {
         if (UI_SheZhi.guanbidatingxiazai)
         {

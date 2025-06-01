@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using InControl;
 using Multiplayer;
 using UnityEngine;
@@ -334,7 +334,7 @@ public class MenuSystem : MonoBehaviour
         if ((gameMainObject.state == GameState.PlayingLevel || gameMainObject.state == GameState.LoadingLevel) && state == MenuSystemState.Inactive)
         {
             mouseMode = useMenuInput && !controllerLastInput;
-            //�޸�
+            //修改
             //if (useMenuInput && mouseMode)
             if ((useMenuInput && mouseMode) || UI_Main.ShowShuBiao || NetChat.typing)
             {

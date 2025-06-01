@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using HumanAPI;
 using Steamworks;
 using UnityEngine;
@@ -70,7 +70,7 @@ public class LevelRepository : WorkshopTypeRepository<WorkshopLevelMetadata>
     {
         if (param.m_eResult != EResult.k_EResultOK)
         {
-            if (!UI_SheZhi.quchujiazaishibai)   ////È¥³ýÎÄ¼þ¼ÓÔØÊ§°Ü   ÐÞ¸Ä
+            if (!UI_SheZhi.quchujiazaishibai)   ////åŽ»é™¤æ–‡ä»¶åŠ è½½å¤±è´¥   ä¿®æ”¹
             {
                 onRead(null);
                 onRead = null;
