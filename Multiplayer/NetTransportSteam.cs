@@ -525,10 +525,10 @@ public class NetTransportSteam : NetTransport
     //}
     public void UpdateUsersLobbyData(int userCount)
     {
-        SteamMatchmaking.SetLobbyData(lobbyID, "cp", (UI_SheZhi.xujiarishu + userCount).ToString());//userCount.ToString()  ///Ğé¼Ù·¿¼äÈËÊı
-        SteamMatchmaking.SetLobbyData(lobbyID, "name", $"¡ï{UI_SheZhi.fangming}");///ĞŞ¸Ä·¿Ãû
+        SteamMatchmaking.SetLobbyData(lobbyID, "cp", (UI_SheZhi.xujiarishu + userCount).ToString());//userCount.ToString()  ///è™šå‡æˆ¿é—´äººæ•°
+        SteamMatchmaking.SetLobbyData(lobbyID, "name", $"â˜…{UI_SheZhi.fangming}");///ä¿®æ”¹æˆ¿å
         SteamMatchmaking.SetLobbyData(lobbyID, "ll", $"{UI_SheZhi.datingming}");
-        SteamMatchmaking.SetLobbyData(lobbyID, "mp", (UI_SheZhi.xujiarishu + Options.lobbyMaxPlayers).ToString());///Ğé¼Ù×î´óÈËÊı
+        SteamMatchmaking.SetLobbyData(lobbyID, "mp", (UI_SheZhi.xujiarishu + Options.lobbyMaxPlayers).ToString());///è™šå‡æœ€å¤§äººæ•°
     }
 
     public override void UpdateServerLevel(ulong levelID, WorkshopItemSource levelType)
@@ -593,7 +593,7 @@ public class NetTransportSteam : NetTransport
                 SavePreviousLobby(param.m_ulSteamIDLobby);
                 lobbyID = new CSteamID(param.m_ulSteamIDLobby);
                 //SteamMatchmaking.SetLobbyData(lobbyID, "name", SteamFriends.GetPersonaName());
-                SteamMatchmaking.SetLobbyData(lobbyID, "name", $"¡ï{UI_SheZhi.fangming}");////ĞŞ¸Ä·¿Ãû
+                SteamMatchmaking.SetLobbyData(lobbyID, "name", $"â˜…{UI_SheZhi.fangming}");////ä¿®æ”¹æˆ¿å
 				SteamMatchmaking.SetLobbyData(lobbyID, "ll", $"{UI_SheZhi.datingming}");
                 SteamMatchmaking.SetLobbyData(lobbyID, "version", VersionDisplay.fullVersion);
                 SteamMatchmaking.SetLobbyData(lobbyID, "net", VersionDisplay.netCode.ToString());
@@ -861,7 +861,7 @@ public class NetTransportSteam : NetTransport
         if (NetGame.isClient)
         {
             //App.instance.OnLostConnection();
-            Debug.Log("Óë·şÎñÆ÷µÄÁ¬½ÓÒÑ¶ªÊ§");/////ĞŞ¸Ä
+            Debug.Log("ä¸æœåŠ¡å™¨çš„è¿æ¥å·²ä¸¢å¤±");/////ä¿®æ”¹
         }
     }
 
@@ -1013,7 +1013,7 @@ public class NetTransportSteam : NetTransport
         {
             return;
         }
-        //ºÃÓÑ·¿
+        //å¥½å‹æˆ¿
         List<ILobbyEntry> haoyoulist = new List<ILobbyEntry>();
         if (UI_SheZhi.danyexianshi)
         {
@@ -1041,19 +1041,19 @@ public class NetTransportSteam : NetTransport
             }
             if (UI_SheZhi.dangqianrenshupaixu)
             {
-                // ¶Ôyxmodlist½øĞĞÅÅĞò
+                // å¯¹yxmodlistè¿›è¡Œæ’åº
                 haoyoulist.Sort((x, y) => ((FriendInfo)y).playersCurrent.CompareTo(((FriendInfo)x).playersCurrent));
             }
 
 
             //onListLobbies(list);
-            //ºÃÓÑ·¿
+            //å¥½å‹æˆ¿
         }
 
 
 
         List<ILobbyEntry> list = new List<ILobbyEntry>();
-        List<ILobbyEntry> similist = new List<ILobbyEntry>();///Ôö¼ÓË½ÃÜ·¿¼äÁĞ±í
+        List<ILobbyEntry> similist = new List<ILobbyEntry>();///å¢åŠ ç§å¯†æˆ¿é—´åˆ—è¡¨
 		List<ILobbyEntry> yxmodlist = new List<ILobbyEntry>();///
         for (int i = 0; i < param.m_nLobbiesMatching; i++)
         {
@@ -1071,7 +1071,7 @@ public class NetTransportSteam : NetTransport
                 FriendInfo friendInfo = new FriendInfo();
                 friendInfo.steamId = lobbyOwner;
                 friendInfo._lobbyId = lobbyByIndex;
-                friendInfo._name = (UI_SheZhi.simifangjian ? (result2 == 1 ? "*" : "") : "") + lobbyData; ////ĞŞ¸Ä
+                friendInfo._name = (UI_SheZhi.simifangjian ? (result2 == 1 ? "*" : "") : "") + lobbyData; ////ä¿®æ”¹
                 //friendInfo._name = lobbyData;
                 friendInfo.inviteOnly = result2 == 1;
                 friendInfo.version = lobbyData2;
@@ -1079,16 +1079,16 @@ public class NetTransportSteam : NetTransport
                 FriendInfo friend = friendInfo;
                 GetNewLobbyData(lobbyByIndex, ref friend);
                 //friend.playersCurrent
-                if (friend._name.StartsWith("¡ï") || friend._name.StartsWith("*¡ï"))
+                if (friend._name.StartsWith("â˜…") || friend._name.StartsWith("*â˜…"))
                 {
                     yxmodlist.Add(friend);
                 }
 
-                else if (!friend.inviteOnly) ////Õı³£·¿¼ä
+                else if (!friend.inviteOnly) ////æ­£å¸¸æˆ¿é—´
                 {
                     list.Add(friend);
                 }
-                else if (friend.inviteOnly)////½öÏŞÑûÇë·¿¼ä
+                else if (friend.inviteOnly)////ä»…é™é‚€è¯·æˆ¿é—´
                 {
                     similist.Add(friend);
                 }
@@ -1096,26 +1096,26 @@ public class NetTransportSteam : NetTransport
         }
         if (UI_SheZhi.dangqianrenshupaixu)
         {
-            // ¶Ôyxmodlist½øĞĞÅÅĞò
+            // å¯¹yxmodlistè¿›è¡Œæ’åº
             yxmodlist.Sort((x, y) => ((FriendInfo)y).playersCurrent.CompareTo(((FriendInfo)x).playersCurrent));
-            // ¶Ôlist½øĞĞÅÅĞò
+            // å¯¹listè¿›è¡Œæ’åº
             list.Sort((x, y) => ((FriendInfo)y).playersCurrent.CompareTo(((FriendInfo)x).playersCurrent));
-            // ¶Ôsimilist½øĞĞÅÅĞò
+            // å¯¹similistè¿›è¡Œæ’åº
             similist.Sort((x, y) => ((FriendInfo)y).playersCurrent.CompareTo(((FriendInfo)x).playersCurrent));
         }
 
         List<ILobbyEntry> combinedList = new List<ILobbyEntry>();
         //yxmodlist = yxmodlist.OrderByDescending(friend => friend.playersCurrent).ToList();
-        combinedList.AddRange(yxmodlist); // Ìí¼ÓyxmodlistÖĞµÄËùÓĞÔªËØµ½combinedList
+        combinedList.AddRange(yxmodlist); // æ·»åŠ yxmodlistä¸­çš„æ‰€æœ‰å…ƒç´ åˆ°combinedList
         if (UI_SheZhi.danyexianshi)
         {
-            combinedList.AddRange(haoyoulist); // Ìí¼ÓyxmodlistÖĞµÄËùÓĞÔªËØµ½combinedList
+            combinedList.AddRange(haoyoulist); // æ·»åŠ yxmodlistä¸­çš„æ‰€æœ‰å…ƒç´ åˆ°combinedList
         }
 
-        combinedList.AddRange(list);      // Ìí¼ÓlistÖĞµÄËùÓĞÔªËØµ½combinedList
+        combinedList.AddRange(list);      // æ·»åŠ listä¸­çš„æ‰€æœ‰å…ƒç´ åˆ°combinedList
         if (UI_SheZhi.simifangjian)
         {
-            combinedList.AddRange(similist); // Ìí¼ÓsimilistÖĞµÄËùÓĞÔªËØµ½combinedList
+            combinedList.AddRange(similist); // æ·»åŠ similistä¸­çš„æ‰€æœ‰å…ƒç´ åˆ°combinedList
         }
 
 

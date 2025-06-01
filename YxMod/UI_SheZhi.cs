@@ -377,7 +377,7 @@ internal class UI_SheZhi : MonoBehaviour
                 //房名设置//最大人数//仅限邀请//锁定关卡//挂机提醒//房间外显最大人数和当前人数修改
                 //屏蔽炸房//防踢
                 UI.CreatWenBenKuang("房间名称", ref fangming, 100, 197,XiuGaiFangMing);
-                UI.CreatWenBenKuang("大厅名称", ref datingming, 100, 197, XiuGaiDaTingMing);
+                UI.CreatWenBenKuang("大厅名称", ref datingming, 1000, 197, XiuGaiDaTingMing);
                 GUILayout.BeginHorizontal();
                 UI.CreatShuZhi("玩家上限", ref zuidarenshu, 0, 99, 1,SetWanJiaShangXian);
                 UI.CreatAnNiu_AnXia("仅限邀请", ref yaoqing, false, SetJinXianYaoQing);
