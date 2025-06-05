@@ -604,7 +604,7 @@ public class NetTransportSteam : NetTransport
                 CSteamID steamIDLobby = lobbyID;
                 uint currentLevelType = (uint)NetGame.instance.currentLevelType;
                 SteamMatchmaking.SetLobbyData(steamIDLobby, "lt", currentLevelType.ToString());
-                SteamMatchmaking.SetLobbyData(lobbyID, "ll", NetGame.instance.lobbyTitle);
+                // SteamMatchmaking.SetLobbyData(lobbyID, "ll", NetGame.instance.lobbyTitle);
                 startHostCallback(null);
             }
             else
